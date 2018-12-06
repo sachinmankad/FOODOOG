@@ -1,0 +1,24 @@
+<div class="row border-red">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="example-app-name">{{titleHeader}}</h1>
+    </mat-toolbar>
+    <!-- SIDE NAVIGATION CONTAINER AND MAIN CONTENT CONTAINER-->
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #sidenav mode="over" class="border-red" 
+        (opened)="events.push('open!')"
+        (closed)="events.push('close!')">
+            <mat-nav-list class="hello">
+                <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">
+                {{nav}}
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <p><button mat-button primary (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+            <p *ngFor="let content of fillerContent">{{content}}</p>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

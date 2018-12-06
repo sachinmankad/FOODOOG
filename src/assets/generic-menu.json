@@ -1,0 +1,102 @@
+{
+	"type": "general-menu",
+	"menu-id": "101",
+	"categorys": [{
+		"Quick Bites": [],
+		"Soups": [{
+			"name": "Clear Soup",
+			"id": "90201",
+			"price": "78"
+		}, {
+			"name": "Sweet Corn Soup",
+			"id": "90202",
+			"price": "88"
+		}, {
+			"name": "Hot & Sour Soup",
+			"id": "90203",
+			"price": "88"
+		}],
+		"Salads": [{
+			"name": "Tomato Salad",
+			"id": "91201",
+			"price": "49"
+		}, {
+			"name": "Onion Salad",
+			"id": "91202",
+			"price": "49"
+		}, {
+			"name": "Mixed Salad",
+			"id": "91203",
+			"price": "49"
+		}, {
+			"name": "Green Salad",
+			"id": "91203",
+			"price": "122"
+		}],
+		"Starters": [{
+			"name": "Tandoori Chicken",
+			"id": "92200",
+			"price": "98"
+		}, {
+			"name": "Grilled Chicken",
+			"id": "92201",
+			"price": "167"
+		}, {
+			"name": "Chicken 65",
+			"id": "92202",
+			"price": "235"
+		}, {
+			"name": "Chicken Momo",
+			"id": "92203",
+			"price": "156"
+		}, {
+			"name": "Pandan Chicken",
+			"id": "92200",
+			"price": "206"
+		}],
+		"Main Course": [{
+			"name": "Veg Fried Rice",
+			"id": "93300",
+			"price": "117"
+		}, {
+			"name": "Veg Noodles",
+			"id": "93301",
+			"price": "117"
+		}, {
+			"name": "Chicken Fried Rice",
+			"id": "93302",
+			"price": "140"
+		}, {
+			"name": "Chicken Noodles",
+			"id": "93303",
+			"price": "140"
+		}, {
+			"name": "Mixed Fried Rice",
+			"id": "93304",
+			"price": "160"
+		}, {
+			"name": "Mixed Noodles",
+			"id": "93305",
+			"price": "160"
+		}],
+		"Meals": [{
+			"name": "Veg Meals",
+			"id": "94100",
+			"price": "110"
+		}, {
+			"name": "Veg Thali Meals ",
+			"id": "94101",
+			"price": "160"
+		}, {
+			"name": "Fish Curry Meals",
+			"id": "94102",
+			"price": "160"
+		}, {
+			"name": "Non-Veg Thali Meals ",
+			"id": "94103",
+			"price": "190"
+		}],
+		"Desserts": {},
+		"Beverages": {}
+	}]
+}

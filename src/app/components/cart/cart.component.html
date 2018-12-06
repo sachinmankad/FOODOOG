@@ -1,0 +1,57 @@
+<div class="cart-container">
+    <div class="title-header">
+        <h6>BRAND NAME</h6>
+        <p>Location details for restaurant</p>
+        <div class="cart-list-box">
+            <div class="cart-list-item" *ngFor="let item of cart">
+                <span class="food-icon-box">
+                    <i class="material-icons icon-item-vegan">fiber_manual_record</i>
+                </span>
+                <div class="dish-details">
+                    <span class="dish-name">{{item.name}}</span>
+                </div>
+                <div class="dish-quantity">
+                    <i class="minus material-icons">
+                        remove_circle_outline
+                    </i>
+                    <span class="counter">{{item.quantity}}</span>
+                    <i class="plus material-icons">
+                        add_circle_outline
+                    </i>
+                </div>
+                <span class="dish-price">{{item.price}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="cart-bill-card" >
+        <h6 class="title">Restaurant Bill</h6>
+        <div class="bill-details">
+            <div class="bill-item">
+                <span class="bill-label">Item Total :</span>
+                <span class="right-side">{{cartList.order_total}}</span>
+            </div>
+            <div class="bill-item">
+                <span class="bill-label">Bag Discount :</span>
+                <span class="right-side">{{cartList.discount}}</span>
+            </div>
+            <div class="bill-item">
+                <span class="bill-label">Package Charges</span>
+                <span class="right-side">{{cartList.pack_charge}}</span>
+            </div>
+            <div class="divider"></div>
+            <div class="bill-item">
+                <span class="bill-label">Delivery Charges</span>
+                <span class="right-side">{{cartList.delivery_charge}}</span>
+            </div>
+            <div class="divider"></div>
+            <div class="bill-item">
+                <span class="bill-label"><strong>Total Bill</strong></span>
+                <span class="right-side "><strong>{{cartList.total}}</strong></span>
+            </div>
+            
+        </div>
+    </div>
+    <!--
+    <p *ngFor="let item of cartList['order-items']">{{item | json}}</p>
+    -->
+</div>

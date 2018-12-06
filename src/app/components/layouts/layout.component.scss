@@ -1,0 +1,26 @@
+.layout-wrapper-container {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    flex : column;
+}
+.layout-app-toolbar {
+    position : fixed;
+    z-index : 2;
+    background: #ee6e73;
+    color: #fff;
+}
+.layout-sidenav-container {
+    //background : lawngreen;
+    background: #f8f8f8;
+    .layout-sidenav-list {
+        margin-top: 63px;
+    }
+    .layout-content-section {
+        padding: 64px 0 30px 0;
+        //border: 1px solid deeppink;
+    }
+}

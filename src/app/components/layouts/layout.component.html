@@ -1,0 +1,52 @@
+<div class="layout-wrapper-container">
+    <!-- HEADER TOOLBAR STARTS -->
+    <mat-toolbar class="layout-app-toolbar">
+        <button mat-icon-button class="justify-content-end" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h3 class="app-name d-flex flex-grow-1 justify-content-center">
+            BRAND APPLICATION
+        </h3>
+    </mat-toolbar>
+    <!-- HEADER TOOLBAR ENDS -->
+    <!-- SIDE NAVIGATION CONTAINER STARTS -->
+    <mat-sidenav-container class="layout-sidenav-container flex-grow-1">
+        <mat-sidenav #sidenav mode="over" (opened)="events.push('open!')" (closed)="events.push('close!')">
+            <mat-nav-list class="layout-sidenav-list">
+                <a mat-list-item *ngFor="let nav of navItems">
+                    <!-- routerLink="." -->
+                    {{nav}}
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content class="layout-content-section">
+            <dashboard></dashboard>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <!-- SIDE NAVIGATION CONTAINER ENDS -->
+</div>
+<!-- 
+<mat-toolbar class="layout-app-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()" class="justify-content-end">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h3 class="app-name d-flex flex-grow-1 justify-content-center">
+        BRAND APPLICATION
+    </h3>
+</mat-toolbar>
+
+<mat-sidenav-container class="layout-sidenav-container d-flex flex-grow-1 p-1">
+  <mat-sidenav #sidenav mode="over" 
+  (opened)="events.push('open!')"
+  (closed)="events.push('close!')">
+    <mat-nav-list class="layout-sidenav-list">
+        <a mat-list-item routerLink="." *ngFor="let nav of navItems">
+            {{nav}}
+        </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="container-main">
+      !--<dashboard></dashboard>--
+  </mat-sidenav-content>
+</mat-sidenav-container>
+-->

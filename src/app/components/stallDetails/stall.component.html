@@ -1,0 +1,158 @@
+<div class="container app-bg">
+    <!-- HELLO -->
+    <div class="row nav navbar app-toolbar-bg">
+        <i class="material-icons" (click)="toggleState()">
+            arrow_back
+        </i>
+    </div>
+    <!-- HELLO -->
+    <div class="row mb-2">
+        <div class="d-flex bg-white col-sm-12 restaurant-header">
+            <img src="../../assets/images/table-1.jpg" class="brand-image img-fluid border" alt="Placeholder"/>
+            <div class="header-details d-flex flex-column">
+                <span class="brand-title">BONITO HUB RESTAURANT</span>
+                <span>SOUTH INDIAN</span>
+            </div>
+        </div>
+    </div>
+    <!-- BLOCK FOR RECOMMENDED LIST STARTS -->
+    <div class="row my-2">
+        <div class="bg-white feature-box p-2 col-sm-12 mt-3 mb-3">
+            <h5 class="feature-header p-1">Recommended</h5>
+            <div class="featured-list-box d-flex flex-row flex-wrap border-bottom pb-3 mx-1 mb-3">
+                <img class="dish-avathar img-fluid border" src="../../assets/images/table-1.jpg" alt=""/>
+                <div class="dish-details ml-2 d-flex flex-column flex-grow-1">
+                    <span class="dish-name">Dragon Chicken</span>
+                    <span class="dish-type">Starters</span>
+                    <!--span class="icon-cuisine">
+                        <i class="material-icons vegan">
+                            fiber_manual_record
+                        </i>
+                    </span-->
+                    <div class="price-box d-flex flex-row py-2">
+                        <span class="price-tag flex-grow-1">Rs. 120.00/-</span>
+                        <button class="btn btn-success btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BLOCK FOR RECOMMENDED LIST ENDS -->
+
+    <!-- MENU CATEGORY LISTS STARTS -->
+    <div class="row">
+        <div class="menu-list-container bg-white p-2 col-sm-12 mt-2 mb-2">
+            <h5 class="p-1">Menu Items</h5>
+            <mat-accordion class="col-md-12" *ngFor="let item of menuItems">
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                           {{item.name}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="menu-accordion-list d-flex flex-row pb-2 mt-4 mb-4" *ngFor="let subItems of item['menu-items']">
+                        <span class="cuisine-type-box">
+                            <i class="material-icons" [ngClass]="(subItems.cuisine_type == 'vegetarian') ? 'vegan' : 'non-vegan'">
+                                fiber_manual_record
+                            </i>
+                        </span>
+                        <div class="menu-item-details">
+                            <p class="dish-name">{{subItems.name | uppercase}}</p>
+                            <span class="dish-price">{{subItems.price}}</span>
+                        </div>
+                        <div class="add-cart-box">
+                            <button class="btn btn-sm btn-success" (click)="addToCart(subItems)"> ADD </button>
+                        </div>
+                        <!-- 
+                        <span class="food-icon-box">
+                            <i class="material-icons" [ngClass]="(subItems.cuisine_type == 'vegetarian') ? 'icon-item-vegan' : 'icon-item-non-vegan' ">
+                                fiber_manual_record
+                            </i>
+                        </span>
+                        -->
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+    <!-- MENU CATEGORY LISTS ENDS -->
+
+    <!-- --
+    <div class="row">
+        <div class="col-md-12">
+            <mat-accordion class="col-md-12" *ngFor="let item of menuItems">
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                           {{item.name}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="accordion-card-content" *ngFor="let subItems of item['menu-items']">
+                        <span class="food-icon-box">
+                            <i class="material-icons" [ngClass]="(subItems.cuisine_type == 'vegetarian') ? 'icon-item-vegan' : 'icon-item-non-vegan' ">
+                                fiber_manual_record
+                            </i>
+                        </span>
+                        <div class="dish-details">
+                            <p>{{subItems.name}}</p>
+                            <p>Rs. {{subItems.price}} /-</p>
+                        </div>
+                        <div class="cart-box">
+                            <button class="btn btn-sm btn-success" (click)="addToCart(subItems)">ADD</button>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+    <!-- -->
+
+</div>
+
+<div class="footer-fixed-container" *ngIf="showCartPanel">
+    <div class="cart-link-panel">
+        <div class="panel-box">
+           <div class="cart-items">
+                <div>
+                    3 Items
+                    <span class="divider">|</span>
+                    <span class="price-detail">708</span>
+                </div>
+            </div>
+            <a class="cart-link" (click)="showCart('hello')">
+                View Cart
+                <!--<i class="material-icons">shopping_cart</i>-->
+            </a>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="cart-button-panel">
+    <div class="panel-container">
+        <div class="cart-items">
+            <div>
+                3 Items
+                <span class="divider">|</span>
+                <span class="price-detail">708</span>
+            </div>
+        </div>
+        <div class="cart-link">
+            View Cart
+        </div>
+    </div>
+</div>
+-->
+<!------
+
+<p >{{subItems.name}}</p>
+<p >{{subItems.consumable}}</p>
+<p >{{subItems.cuisine_type}}</p>
+<p >{{subItems.cuisine_name}}</p>
+
+[ngClass]="(subItems.cuisine-type == 'vegetarian') ?'icon-item-vegan':'icon-item-non-vegan'"   
+</span>
+<p class="font-weight-bold">{{subItems.name}}</p>
+<p class="">{{subItems.cuisine-type |json}}</p>
+<p >{{subItems.description}}</p>
+<p >Rs. {{subItems.price}} /-</p>
+------->

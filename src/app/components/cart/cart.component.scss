@@ -1,0 +1,83 @@
+.cart-container {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px 0;
+
+    .title-header {
+        width: 100%;
+        padding: 5px;
+        background: #fff;
+
+        .food-icon-box {
+            margin-top : 5px;
+            .icon-item-vegan {
+                font-size: 18px;
+                color: green;
+                border: 1px solid green;
+            }
+            .icon-item-non-vegan {
+                font-size: 18px;
+                color: darkred;
+                border: 1px solid darkred;
+            }
+        }
+
+        .cart-list-box {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+
+            .cart-list-item {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .dish-quantity {
+                    display : flex;
+                    flex-flow: row wrap;
+                    align-items : center;
+                    justify-content:  space-around;
+                    color: mediumseagreen;
+                    .counter {
+                        margin: 0 5px;
+                    }
+                    .material-icons{
+                        font-size: 20px;
+                    }
+                }
+                .dish-details {
+                    flex : 1 0 0;
+                    margin: 0 5px;
+                    padding : 0 5px;
+                }
+                .dish-price {
+                    margin-left:5px;
+                }
+            }
+        }
+    }   
+    .cart-bill-card {
+        margin-top:15px;
+        background : white;
+        padding: 5px 10px;
+        .title {
+            margin-bottom:5px;
+        }
+        .bill-details {
+            display: flex;
+            flex-flow : column wrap;
+            .bill-item {
+                display: flex;
+                flex-flow: row wrap;
+                align-items : center;
+                justify-content: space-between;
+                padding: 5px 0px;
+            }
+            .divider {
+                border-bottom: 1px solid #dfdfdf;
+                padding:5px 0 0;
+            }
+        }
+    }
+}

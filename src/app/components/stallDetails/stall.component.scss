@@ -1,0 +1,255 @@
+.app-toolbar-bg {
+    background: lightcoral !important;
+    color: #fff;
+    height: 56px;
+}
+
+.restaurant-header {
+    padding: 20px 15px;
+    .brand-image {
+        width: 60px;
+        height: 60px;
+        background: darkgrey;
+    }
+    .header-details {
+        margin: 0 8px;
+        .brand-title {
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+    
+}
+.feature-box {
+    .feature-header {
+        width: 100%;
+    }
+    .featured-list-box {
+        .dish-avathar {
+            width: 90px;
+            height: 90px;
+        }
+        .dish-details {
+            .dish-name {
+                font-weight: 400;
+                font-size: 16px;
+                margin-bottom: 2px;
+            }
+            .dish-type {
+                font-size: 14px;
+            }
+            .icon-cuisine {
+                .vegan {
+                    font-size: 18px;
+                    color: green;
+                    border: 1px solid green;
+                }
+                .non-vegan {
+                    font-size: 18px;
+                    color: darkred;
+                    border: 1px solid darkred;
+                }
+            }
+            .price-tag {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.menu-list-container {
+    .mat-expansion-panel {
+        box-shadow : none !important;
+        border-bottom : 1px solid #e5e5e5;
+    }
+    .menu-accordion-list {
+        .menu-item-details {
+            align-self: center;
+            flex : 2 0;
+            .dish-name {
+                font-size:16px;
+                font-weight: 400;
+                color: darkslategrey;
+            }
+            .dish-price {
+                font-size:14px;
+                &:before {
+                    content: '\20B9';
+                    margin-right: .5rem;
+                }
+            }
+        }
+        .add-cart-box {
+            align-self: flex-end;
+        }
+    }
+}
+/** GENERAL ICON STYLE **/
+.cuisine-type-box {
+    margin-right: 12px;
+    .vegan {
+        font-size: 18px;
+        color: green;
+        border: 1px solid green;
+        padding-top: 1px;
+    }
+    .non-vegan {
+        font-size: 18px;
+        color: darkred;
+        border: 1px solid darkred;
+        padding-top: 1px;
+    }
+}
+
+
+
+
+.accordion-card-content {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border-botttom : 1px solid red;
+
+    .food-icon-box {
+        margin-right: 10px;
+        .icon-item-vegan {
+            font-size: 18px;
+            color: green;
+            border: 1px solid green;
+        }
+        .icon-item-non-vegan {
+            font-size: 18px;
+            color: darkred;
+            border: 1px solid darkred;
+        }
+    }
+    .dish-details {
+        align-self: center;
+        flex : 2 0;
+    }
+    .cart-box {
+        align-self: flex-end;
+    }
+}
+.footer-fixed-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+    .cart-link-panel {
+        height: 48px;
+        background: #60b246;
+        color: #fff;
+        z-index: 2;
+        position: relative;
+        contain: content;
+        pointer-events: auto;
+    }
+    .panel-box {
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 16px;
+        .cart-items {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.07rem;
+            .divider {
+                margin: 0 8px;
+                font-weight: 300;
+            }
+            .price-detail {
+                &:before {
+                    content: '\20B9';
+                    margin-right: .5rem;
+                }
+            }
+        }
+        .cart-link {
+            margin-left: 10px;
+            text-transform: uppercase;
+            font-size: 1.07rem;
+            font-weight: 600;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+}
+
+/****
+.cart-button-panel {
+    position : fixed;
+    display: flex;
+    bottom : 0;
+    left: 0;
+    right: 0;
+    flex-wrap : row wrap;
+    background: mediumseagreen;
+    padding: 0 15px;
+    min-height: 48px;
+    align-items: center ;
+    .panel-container {
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 16px;
+
+        .cart-items {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.07rem;
+
+            .divider {
+                margin: 0 8px;
+                font-weight: 300;
+            }
+            .price-detail {
+                &:before {
+                    content: '\20B9';
+                    margin-right: .1rem;
+                }
+            }
+        }
+        .cart-link {
+            margin-left: 10px;
+            text-transform: uppercase;
+            font-size: 1.07rem;
+            font-weight: 600;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+}
+/*****/
